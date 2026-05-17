@@ -25,15 +25,22 @@ const HomePage = () => {
 
       <Header />
 
-      <section className="relative min-h-[90dvh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1700905976495-88e81c407775"
-            alt="Books background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/60" />
-        </div>
+     <section className="relative min-h-[90dvh] flex items-center overflow-hidden">
+  <div className="absolute inset-0 z-0">
+    <img
+      src="https://images.unsplash.com/photo-1700905976495-88e81c407775"
+      alt="Books background"
+      className="w-full h-full object-cover"
+    />
+
+    {/* Light overlay only */}
+    <div className="absolute inset-0 bg-black/30" />
+  </div>
+
+  {/* Your content */}
+  <div className="relative z-10">
+    {/* content here */}
+  </div>
 
         <div className="container-custom relative z-10 py-20">
           <motion.div
@@ -42,12 +49,16 @@ const HomePage = () => {
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" style={{ letterSpacing: '-0.02em' }}>
-              Discover your next great read
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Browse thousands of books across all genres. From bestsellers to hidden gems, find the perfect book for every moment.
-            </p>
+           <h1
+  className="text-5xl md:text-6xl lg:text-7xl text-white font-bold mb-6 leading-tight"
+  style={{ letterSpacing: '-0.02em' }}
+>
+  Discover your next great read
+</h1>
+
+<p className="text-xl text-white/80 mb-8 leading-relaxed">
+  Browse thousands of books across all genres. From bestsellers to hidden gems, find the perfect book for every moment.
+</p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" asChild className="transition-all duration-200 active:scale-95">
                 <Link to="/products">
